@@ -1,0 +1,29 @@
+{
+  "name": "deb-control",
+  "version": "1.0.0",
+  "description": "parse debian/control",
+  "license": "MIT",
+  "repository": "battlemidget/deb-control",
+  "author": {
+    "name": "Adam Stokes",
+    "email": "adam.stokes@ubuntu.com",
+    "url": "astokes.org"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "xo": "^0.12.1"
+  }
+}
