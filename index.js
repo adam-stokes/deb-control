@@ -1,10 +1,18 @@
 'use strict';
-module.exports = function (str, opts) {
-	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string');
-	}
 
-	opts = opts || {};
+const fs = require('mz/fs');
 
-	return str + ' & ' + (opts.postfix || 'rainbows');
-};
+class DebControl {
+    constructor(controlPath) {
+        this.controlPath = controlPath;
+    }
+
+    readFile() {
+        return fs.readFile(this.controlPath)
+            .then((data) => {
+                return data.toString().split('\n');
+            });
+    }
+}
+
+module.exports = DebControl;
